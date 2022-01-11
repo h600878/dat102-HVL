@@ -5,7 +5,7 @@ public class Person {
 	private String navn;
 	private int nr;
 
-	// Konstruktører
+	// KonstruktÃ¸rer
 
 	public Person() {
 		this("", 0);
@@ -15,9 +15,8 @@ public class Person {
 		this.navn = navn;
 		this.nr = nr;
 	}
-	
 
-	// Overkjøring av equals-metoden
+	// OverkjÃ¸ring av equals-metoden
 	/**
 	 * @return navn
 	 */
@@ -37,7 +36,7 @@ public class Person {
 	}
 
 	@Override
-   public boolean equals(Object andre) {
+   	public boolean equals(Object andre) {
 		if (this == andre) {
 			return true;
 		}
@@ -51,6 +50,6 @@ public class Person {
 		Person denAndre = (Person) andre;
 		boolean like = this.navn == denAndre.getNavn() && this.nr == denAndre.getNr();
         return like;
-   }
+   	}
 
 }// class

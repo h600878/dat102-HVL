@@ -120,7 +120,6 @@ public class TabellBag<T> implements BagADT<T> {
 	public void skriv() {
 		for (int i = 0; i < antall; i++) {
 			System.out.println(bag[i]);
-
 		}
 	}
 
@@ -128,7 +127,6 @@ public class TabellBag<T> implements BagADT<T> {
 		T[] nyBag = tilTabell();
 		for (T el : nyBag) {
 			System.out.println(el);
-
 		}
 	}
 

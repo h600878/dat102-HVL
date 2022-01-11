@@ -4,12 +4,12 @@ import no.hvl.dat102.adt.BagADT;
 import no.hvl.dat102.tabell.TabellBag;
 
 public class KlientTabellBag {
-	static Person personer[] = { new Person("Berit", 4), new Person("Kamil", 2), new Person("Eirik", 1),
+	static Person[] personer = { new Person("Berit", 4), new Person("Kamil", 2), new Person("Eirik", 1),
 			new Person("Alina", 3), new Person("Marius", 5) };
 
 	public static void main(String[] args) {
 
-// Noe enkel og mangelfull testing
+	// Noe enkel og mangelfull testing
 
 		BagADT<Person> bag = new TabellBag<>(5);
 		// Legger til personer
@@ -19,7 +19,7 @@ public class KlientTabellBag {
 		// Skriver ut samlingen
 		((TabellBag<Person>) bag).skriv();
 
-// Fjerner personen i posisjon i = 2 fra samlingen som fins
+		// Fjerner personen i posisjon i = 2 fra samlingen som fins
 		Person resultat = null;
 		Person person = personer[2];
 		if (!bag.erTom()) {
@@ -31,16 +31,16 @@ public class KlientTabellBag {
 			System.out.println("\nPersonenen " + person + " er ikke i samlingen");
 		}
 
-//Bør også teste når personen ikke fins i samlingen
+		//BÃ¸r ogsÃ¥ teste nÃ¥r personen ikke fins i samlingen
 
-// Test på inneholder
+		// Test pÃ¥ inneholder
 		person = new Person("Berit", 4);
 		if (bag.inneholder(person)) {
 			System.out.println("\nSamlingen inneholder " + person);
 		} else {
 			System.out.println("\nSamlingen inneholder ikke " + person);
 		}
-// Bør også teste på en person som ikke er med i samlingen
+		// BÃ¸r ogsÃ¥ teste pÃ¥ en person som ikke er med i samlingen
 
 		// Alt1: Skriver ut en full tabell (mangler en person som er fjernet)
 		System.out.println("\nAlternativ1\n");
