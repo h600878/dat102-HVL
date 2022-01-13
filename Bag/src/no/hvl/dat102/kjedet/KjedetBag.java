@@ -54,4 +54,12 @@ public class KjedetBag<T> implements BagADT<T> {
 		return null;
 	}
 
+	public void skriv() {
+		//TODO skriv ut samlingen
+	}
+
+	public void skrivnyBag() {
+		//TODO
+	}
+
 }// class
