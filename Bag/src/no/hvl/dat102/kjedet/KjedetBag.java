@@ -14,44 +14,113 @@ public class KjedetBag<T> implements BagADT<T> {
 
 	@Override
 	public void leggTil(T el) {
-		// TODO Auto-generated method stub
+		LinearNode<T> nynode = new LinearNode<T>(el);
+		nynode.setNeste(forste);
+		forste = nynode;
+		antall++;
 
 	}
 
 	@Override
 	public T fjern(T el) {
-		// TODO Auto-generated method stub
-		return null;
+		T resultat = null;
+		if (erTom())
+			throw new EmptyCollectionException("bag");
+		LinearNode<T> node = finnNode(el);
+		if (node != null) {
+			resultat = node.getElement();
+			T forsteEl = forste.getElement();
+			node.setElement(forsteEl);
+			forste = forste.getNeste();
+			antall--;
+
+		}
+		return resultat;
+	}
+
+	private LinearNode<T> finnNode(T el) {
+		boolean funnet = false;
+		LinearNode<T> node = null;
+		LinearNode<T> aktuell = forste;
+		for (int soek = 0; soek < antall && !funnet; soek++) {
+			if (aktuell.getElement().equals(el)) {
+				funnet = true;
+				node = aktuell;
+			} else {
+				aktuell = aktuell.getNeste();
+			}
+		}
+		return node;
 	}
 
 	@Override
 	public boolean inneholder(T el) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean funnet = false;
+		LinearNode<T> aktuell = forste;
+		for (int soek = 0; soek < antall && !funnet; soek++) {
+			if (aktuell.getElement().equals(el)) {
+				funnet = true;
+			} else {
+				aktuell = aktuell.getNeste();
+			}
+		}
+		return funnet;
 	}
 
 	@Override
 	public void nullstill() {
-		// TODO Auto-generated method stub
+		while (!erTom()) {
+			fjern();
+		}
+	}
+
+	private void fjern() {
+		if (forste != null) {
+			forste = forste.getNeste(); // Fjerner forste node
+			antall--;
+		}
 
 	}
 
 	@Override
 	public int antall() {
-		// TODO Auto-generated method stub
-		return 0;
+		return antall;
+
 	}
 
 	@Override
 	public boolean erTom() {
-		// TODO Auto-generated method stub
-		return false;
+		return antall == 0;
 	}
 
 	@Override
 	public T[] tilTabell() {
-		// TODO Auto-generated method stub
-		return null;
+		T[] tabell = (T[]) new Object[antall];
+		int i = 0;
+		LinearNode<T> aktuell = forste;
+		while (aktuell != null) {
+			tabell[i] = aktuell.getElement();
+			i++;
+			aktuell = aktuell.getNeste();
+		}
+		return tabell;
+	}
+
+	public void skriv() {
+		LinearNode<T> aktuell = forste;
+		while (aktuell != null) {
+			System.out.println(aktuell.getElement());
+			aktuell = aktuell.getNeste();
+		}
+	}
+
+	public void skrivnyBag() {
+		T[] nyBag = tilTabell();
+		for (T el : nyBag) {
+			System.out.println(el);
+
+		}
+
 	}
 
 	public void skriv() {

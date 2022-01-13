@@ -1,7 +1,7 @@
 package no.hvl.dat102.bagklient;
 
 import no.hvl.dat102.adt.BagADT;
-import no.hvl.dat102.kjedet.KjedetBag;
+import no.hvl.dat102.kjedet.Kjedet2Bag;
 
 public class KlientKjedetBag {
 	static Person personer[] = { new Person("Berit", 4), new Person("Kamil", 2), new Person("Eirik", 1),
@@ -11,13 +11,13 @@ public class KlientKjedetBag {
 
 // Noe enkel og mangelfull testing
 
-		BagADT<Person> bag = new KjedetBag<>();
+		BagADT<Person> bag = new Kjedet2Bag<>();
 		// Legger til personer
 		for (int i = 0; i < personer.length; i++) {
 			bag.leggTil(personer[i]);
 		}
 		// Skriver ut samlingen
-		((KjedetBag<Person>) bag).skriv();
+		((Kjedet2Bag<Person>) bag).skriv();
 
 // Fjerner personen i posisjon i = 2 fra samlingen som fins
 		Person resultat = null;
@@ -44,7 +44,7 @@ public class KlientKjedetBag {
 
 		// Alt1: Skriver ut en full tabell (mangler en person som er fjernet)
 		System.out.println("\nAlternativ1\n");
-		((KjedetBag<Person>) bag).skrivnyBag();
+		((Kjedet2Bag<Person>) bag).skrivnyBag();
 
 		System.out.println("\nAlternativ2\n");
 
