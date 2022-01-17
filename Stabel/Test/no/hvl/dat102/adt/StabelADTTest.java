@@ -44,7 +44,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test pÃ¥ at en ny stabel er tom.
+	 * Test på at en ny stabel er tom.
 	 */
 	@Test
 	public void nyStabelErTom() {
@@ -52,7 +52,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test pÃ¥push and pop.
+	 * Test opå push and pop.
 	 */
 	@Test
 	public void pushOgPop() {
@@ -73,7 +73,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test pï¿½ push og pop med duplikate verdier.
+	 * Test på push og pop med duplikate verdier.
 	 */
 	@Test
 	public void pushOgPopMedDuplikater() {
@@ -94,7 +94,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Testing pï¿½ peek.
+	 * Testing på peek.
 	 */
 	@Test
 	public void pushPopPushPushPopPeek() {
@@ -112,7 +112,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test pï¿½ at en stabel med noen elementer ikke er tom.
+	 * Test på at en stabel med noen elementer ikke er tom.
 	 */
 	@Test
 	public final void erIkkeTom() {
@@ -122,7 +122,7 @@ public abstract class StabelADTTest {
 	}
 
 	/**
-	 * Test pï¿½ at en stabel med null elementer er tom.
+	 * Test på at en stabel med null elementer er tom.
 	 */
 	@Test
 	public void pushPopErTom() {
@@ -136,19 +136,9 @@ public abstract class StabelADTTest {
 		}
 	}
 
+	
 	/**
-	 * Test pï¿½ stï¿½rrelsen
-	 */
-	@Test
-	public void stor() {
-		stabel.push(e0);
-		stabel.push(e1);
-		stabel.push(e2);
-		assertEquals(3, stabel.antall());
-	}
-
-	/**
-	 * Forsï¿½k pï¿½ pop av en tom stabel skal gi "underflow excepton" *
+	 * Forsøk på pop av en tom stabel skal gi "underflow excepton" *
 	 * 
 	 * @throws EmptyCollectionException expected exception
 	 */

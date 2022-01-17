@@ -1,4 +1,5 @@
 package no.hvl.dat102.tabell;
+
 import no.hvl.dat102.adt.StabelADT;
 import no.hvl.dat102.exception.EmptyCollectionException;
 
@@ -7,67 +8,57 @@ import no.hvl.dat102.exception.EmptyCollectionException;
 
 public class TabellStabel<T> implements StabelADT<T> {
 	private final static int STDK = 100;
-	private int topp; // indikerer neste plass
+	private int topp; // indikerer toppen
 	private T[] stabel;
 
 	/*******************************************************************
 	 * Oppretter en tom stabel.
 	 *******************************************************************/
-	
+
 	public TabellStabel() {
-		this(STDK);		
+		this(STDK);
 	}
 
 	/*******************************************************************
-	 * Oppretter en tom stabel med en speisfisert kapasitet.
+	 * Oppretter en tom stabel med en spesifisert kapasitet.
 	 *******************************************************************/
 	public TabellStabel(int startKapasitet) {
-		topp = 0;
-		@SuppressWarnings("unchecked")
-		T[] nyStabel = (T[]) (new Object[startKapasitet]);
-		stabel = nyStabel;
+		topp = -1;
+		stabel = (T[]) (new Object[startKapasitet]);
 	}
 
 	/*******************************************************************
-	 * Legger til det spesifiserte elementet pÃ¥ toppen av stabelen, utvider
-	 * kapasitetet til stabelen hvis nï¿½dvendig.
+	 * Legger til det spesifiserte elementet på toppen av stabelen, utvider
+	 * kapasiteten til stabelen hvis nødvendig.
 	 *******************************************************************/
 	@Override
 	public void push(T element) {
-		if (antall() == stabel.length)
-			utvid();
-
-		stabel[topp] = element;
-		topp++;
+		// TODO
 	}
 
 	/*******************************************************************
 	 * 
-	 * Fjerner toppelementet og returnerer en referanse til den. Hvis stabelen
-	 * er tom fra fï¿½r, sï¿½ returneres null
+	 * Fjerner toppelementet og returnereret referansen. Hvis stabelen tom fra før,
+	 * kastes unntak
 	 *******************************************************************/
 	@Override
-	public T pop() throws EmptyCollectionException {
-		if (erTom())
-			throw new EmptyCollectionException("Stabel");
+	public T pop() {
+		// TODO
 
-		topp--;
-		T result = stabel[topp];
-		stabel[topp] = null;
-
-		return result;
+		return null;
 	}
 
 	/*******************************************************************
-	 * Returnerer toppelementet uten ï¿½ fjerne det. Hvis stabelen er tom fra
-	 * fï¿½r, sï¿½ returneres null
+	 * Returnerer toppelementet uten å fjerne det. Hvis stabelen er tom fra før,
+	 * returneres null-ref.
 	 *******************************************************************/
 	@Override
-	public T peek() throws EmptyCollectionException {
+	public T peek() {
 		if (erTom())
 			throw new EmptyCollectionException("Stabel");
 
-		return stabel[topp - 1];
+		// TODO
+		return null;
 	}
 
 	/*******************************************************************
@@ -75,23 +66,13 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	@Override
 	public boolean erTom() {
-		return (topp == 0);
+		return (topp < 0);
 	}
 
 	/*******************************************************************
-	 * Returnerer antall elementer.
-	 *******************************************************************/
-	@Override
-	public int antall() {
-		return topp;
-	}
-
-	
-	/*******************************************************************
-	 * Oppretter en ny tabell for ï¿½ lagre innholdet.
+	 * Oppretter en ny tabell for å lagre innholdet.
 	 *******************************************************************/
 	private void utvid() {
-		@SuppressWarnings("unchecked")
 		T[] hjelpeTabell = (T[]) (new Object[stabel.length * 2]);
 
 		for (int indeks = 0; indeks < stabel.length; indeks++)
