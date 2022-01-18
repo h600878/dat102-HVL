@@ -23,12 +23,14 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	public TabellStabel(int startKapasitet) {
 		topp = 0;
-		stabel = (T[]) (new Object[startKapasitet]);
+		@SuppressWarnings("unchecked")
+		T[] nyStabel = (T[]) (new Object[startKapasitet]);
+		stabel = nyStabel;
 	}
 
 	/*******************************************************************
-	 * Legger til det spesifiserte elementet på toppen av stabelen, utvider
-	 * kapasitetet til stabelen hvis nødvendig.
+	 * Legger til det spesifiserte elementet pÃ¥ toppen av stabelen, utvider
+	 * kapasitetet til stabelen hvis nï¿½dvendig.
 	 *******************************************************************/
 	@Override
 	public void push(T element) {
@@ -42,7 +44,7 @@ public class TabellStabel<T> implements StabelADT<T> {
 	/*******************************************************************
 	 * 
 	 * Fjerner toppelementet og returnerer en referanse til den. Hvis stabelen
-	 * er tom fra før, så returneres null
+	 * er tom fra fï¿½r, sï¿½ returneres null
 	 *******************************************************************/
 	@Override
 	public T pop() throws EmptyCollectionException {
@@ -57,8 +59,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	}
 
 	/*******************************************************************
-	 * Returnerer toppelementet uten å fjerne det. Hvis stabelen er tom fra
-	 * før, så returneres null
+	 * Returnerer toppelementet uten ï¿½ fjerne det. Hvis stabelen er tom fra
+	 * fï¿½r, sï¿½ returneres null
 	 *******************************************************************/
 	@Override
 	public T peek() throws EmptyCollectionException {
@@ -86,9 +88,10 @@ public class TabellStabel<T> implements StabelADT<T> {
 
 	
 	/*******************************************************************
-	 * Oppretter en ny tabell for å lagre innholdet.
+	 * Oppretter en ny tabell for ï¿½ lagre innholdet.
 	 *******************************************************************/
 	private void utvid() {
+		@SuppressWarnings("unchecked")
 		T[] hjelpeTabell = (T[]) (new Object[stabel.length * 2]);
 
 		for (int indeks = 0; indeks < stabel.length; indeks++)

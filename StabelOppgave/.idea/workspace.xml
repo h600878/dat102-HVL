@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7873dabb-4fab-4e20-b0fc-039db2de684b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Stabel/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/Test/no/hvl/dat102/adt/StabelADTTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Stabel/Test/no/hvl/dat102/adt/StabelADTTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/src/no/hvl/dat102/adt/StabelADT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/src/no/hvl/dat102/exception/EmptyCollectionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Stabel/src/no/hvl/dat102/exception/EmptyCollectionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stabel/src/no/hvl/dat102/klient/KlientStabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Stabel/src/no/hvl/dat102/klient/KlientStabel.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23riAXaBEEPAjjLre4P2dKOh8wu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Stabel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Test/no/hvl/dat102/tabell" />
+      <recent name="$PROJECT_DIR$/Test/no/hvl/dat102/kjedet" />
+      <recent name="$PROJECT_DIR$/Test/no/hvl/dat102/adt" />
+      <recent name="$PROJECT_DIR$/src/no/hvl/dat102/tabell" />
+      <recent name="$PROJECT_DIR$/src/no/hvl/dat102/klient" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/no/hvl/dat102" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/no/hvl/dat102/adt" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Stabel" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Stabel" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7873dabb-4fab-4e20-b0fc-039db2de684b" name="Changes" comment="" />
+      <created>1642498465354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642498465354</updated>
+      <workItem from="1642498466448" duration="768000" />
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
