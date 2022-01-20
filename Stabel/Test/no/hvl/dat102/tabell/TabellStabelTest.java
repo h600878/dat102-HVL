@@ -8,7 +8,7 @@ public class TabellStabelTest extends StabelADTTest {
 
 	@Override
 	protected StabelADT<Integer> reset() {
-		return new TabellStabel<Integer>();
+		return new TabellStabel<>();
 	}
 
 }

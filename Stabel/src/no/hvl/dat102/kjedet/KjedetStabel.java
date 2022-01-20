@@ -4,19 +4,16 @@ import no.hvl.dat102.adt.StabelADT;
 import no.hvl.dat102.exception.EmptyCollectionException;
 
 public class KjedetStabel<T> implements StabelADT<T> {
+
 	private LinearNode<T> topp;
 
 	public KjedetStabel() {
 		topp = null;
-
 	}
 
 	@Override
 	public void push(T el) {
-		LinearNode<T> nynode = new LinearNode<T>(el);
-		nynode.setNeste(topp);
-		topp = nynode;
-
+		topp = new LinearNode<>(el, topp);
 	}
 
 	@Override
