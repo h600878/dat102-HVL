@@ -13,7 +13,7 @@ public class Posisjon {
 	private int y;
 
 	/*
-	 * Konstruktør
+	 * Konstrukt�r
 	 */
 	Posisjon() {
 		x = 0;
@@ -26,11 +26,12 @@ public class Posisjon {
 	public int getX() {
 		return x;
 	}
-
+	
+	
 	/**
 	 * @param x , x-koordinat	 
 	 */
-	public void setX(int x) {
+	 	public void setX(int x) {
 		this.x = x;
 	}
 

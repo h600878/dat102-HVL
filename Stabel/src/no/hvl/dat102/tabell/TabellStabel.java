@@ -34,6 +34,8 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	@Override
 	public void push(T element) {
+		if(topp == stabel.length-1)
+			utvid();
 		topp++;
 		stabel[topp] = element;
 	}
@@ -45,10 +47,12 @@ public class TabellStabel<T> implements StabelADT<T> {
 	 *******************************************************************/
 	@Override
 	public T pop() {
-		T pop = peek();
-		stabel[topp] = null;
-		topp--;
-		return pop;
+		if (erTom())
+			throw new EmptyCollectionException("Stabel");
+		T resultat = stabel[topp];
+        stabel[topp] = null;
+        topp--;
+		return resultat;
 	}
 
 	/*******************************************************************

@@ -20,7 +20,6 @@ public class KjedetStabel<T> implements StabelADT<T> {
 	public T pop() {
 		if (erTom())
 			throw new EmptyCollectionException("stabel");
-
 		T resultat = topp.getElement();
 		topp = topp.getNeste();
 
