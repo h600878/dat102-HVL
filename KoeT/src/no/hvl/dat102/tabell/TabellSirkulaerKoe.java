@@ -22,7 +22,9 @@ public class TabellSirkulaerKoe<T> implements KoeADT<T> {
 	}
 
 	public TabellSirkulaerKoe(int startKapasitet) {
-		koe = ((T[]) (new Object[startKapasitet + 1]));
+		@SuppressWarnings("unchecked")
+		T[] temp = ((T[]) (new Object[startKapasitet + 1]));
+		koe = temp;
 		foran = 0;
 		bak = startKapasitet;
 	}

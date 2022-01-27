@@ -2,7 +2,8 @@ package no.hvl.dat102.klienter;
 
 public class Kunde {
 
-	private int ankTid, ferdigTid;
+	private final int ankTid;
+	private int ferdigTid;
 
 	public Kunde(int tid) {
 		ankTid = tid;
