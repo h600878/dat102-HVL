@@ -148,7 +148,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 
 	public MengdeADT<T> union(MengdeADT<T> m2) {
-		//TODO
+		//TODO - Lage en mer effektiv kode
 		MengdeADT<T> begge = new TabellMengde<T>();
 		T element = null;
 		/*

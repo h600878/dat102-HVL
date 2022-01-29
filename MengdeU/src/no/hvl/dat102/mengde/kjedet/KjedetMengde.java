@@ -114,7 +114,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		return funnet;
 	}
 	/*
-	 * Når vi overkjører (ovverride) equals- meteoden er det anbefalt at vi også
+	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
 	 * overkjører hashcode-metoden da en del biblioteker bruker hascode sammen med
 	 * equals. Vi kommer tilbake til forklaring og bruk av hashcode senere i faget.
 	 */
@@ -130,7 +130,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public boolean equals(Object ny) {
-		// TODO
+		
 		if (this == ny) {
 			return true;
 		}
@@ -171,7 +171,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public MengdeADT<T> union(MengdeADT<T> m2) {
-		// TODO
+		// TODO - lage en mer effektiv kode
 		MengdeADT<T> begge = new KjedetMengde<T>();
 		LinearNode<T> aktuell = start;
 		T element = null;
