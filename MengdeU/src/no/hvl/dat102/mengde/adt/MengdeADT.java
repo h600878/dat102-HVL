@@ -6,11 +6,11 @@ import no.hvl.dat102.exception.EmptyCollectionException;
 
 public interface MengdeADT<T> extends Iterable<T>{
 	// Interface som definerer alle operasjoner i en ADT
-	// med navn MengdeADT (en datasamling, en høynivå datastruktur)
+	// med navn MengdeADT (en datasamling, en hÃ¸ynivÃ¥ datastruktur)
 
 	/**
 	 * Legger til et objekt av klasse T til dette mengde-objektet hvis det ikke
-	 * fins fra før
+	 * fins fra fï¿½r
 	 * 
 	 * @param element som skal legges til
 	 */
@@ -26,7 +26,7 @@ public interface MengdeADT<T> extends Iterable<T>{
 	 * Fjerner og returnerer et tilfeldig element fra mengden
 	 * 
 	 * @return returnerer det tilfeldige elementet 
-	 *  @exception EmptyCollectionException når mengden er tom
+	 *  @exception EmptyCollectionException nï¿½r mengden er tom
 	 */
 	T fjernTilfeldig();
 
@@ -34,7 +34,7 @@ public interface MengdeADT<T> extends Iterable<T>{
 	 * 
 	 * @param element er elementet som skal fjernes hvis det fins
 	 * @return elementet som fjernes
-	 * @exception EmptyCollectionException når stabelen er tom
+	 * @exception EmptyCollectionException nï¿½r stabelen er tom
 	 */
 	T fjern(T element);
 
@@ -53,7 +53,7 @@ public interface MengdeADT<T> extends Iterable<T>{
 	boolean inneholder(T element);
 
 	/**
-	 * Tester om this-mengden og parameteren inneholder nøyaktig de samme
+	 * Tester om this-mengden og parameteren inneholder nï¿½yaktig de samme
 	 * elementene
 	 * 
 	 * @param m2 er  mengden som testes
@@ -82,13 +82,13 @@ public interface MengdeADT<T> extends Iterable<T>{
 	 *         og parameteren 
 	 */
 	MengdeADT<T> snitt(MengdeADT<T> m2);
+
 	/**
-	 * 
+	 *
 	 * @param m2 er parameteren
 	 * @return returnerer en ny mende som er diffrensen av denne mengden (this)
 	 *         og parameteren
 	 */
-
 	MengdeADT<T> differens(MengdeADT<T> m2);
 	
 	
@@ -97,16 +97,14 @@ public interface MengdeADT<T> extends Iterable<T>{
 	 * @param m2 er parametermengden
 	 * @return true hvis m2 er en undermengde av denne mengden, ellers false
 	 */
-	public boolean undermengde(MengdeADT<T> m2);
+	boolean undermengde(MengdeADT<T> m2);
 
 	/**
-	 * Oppretter et 'oppramsobjekt' som kan brukes til å gjennomgå alle
+	 * Oppretter et 'oppramsobjekt' som kan brukes til ï¿½ gjennomgï¿½ alle
 	 * elementer i mengden etter tur en gang
-	 * 
+	 *
 	 * @return et oppramsobjekt
 	 */
-	
-	
 	Iterator<T> iterator();
 
 	
