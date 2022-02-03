@@ -46,7 +46,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 			throw new EmptyCollectionException("mengde");
 
 		LinearNode<T> forgjenger, aktuell;
-		T resultat = null;
+		T resultat;
 
 		int valg = rand.nextInt(antall) + 1;
 		if (valg == 1) {
@@ -80,7 +80,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 			resultat = start.getElement();
 			start = start.getNeste();
 			antall--;
-		} else {// Gjennomgår den kjedete strukturen
+		} else {// GjennomgÃ¥r den kjedete strukturen
 			forgjenger = start;
 			aktuell = start.getNeste();
 			for (int sok = 2; sok <= antall && !funnet; sok++) {
@@ -114,8 +114,8 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		return funnet;
 	}
 	/*
-	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
-	 * overkjører hashcode-metoden da en del biblioteker bruker hascode sammen med
+	 * NÃ¥r vi overkjÃ¸rer (override) equals- meteoden er det anbefalt at vi ogsÃ¥
+	 * overkjÃ¸rer hashcode-metoden da en del biblioteker bruker hascode sammen med
 	 * equals. Vi kommer tilbake til forklaring og bruk av hashcode senere i faget.
 	 */
 
@@ -172,9 +172,9 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	@Override
 	public MengdeADT<T> union(MengdeADT<T> m2) {
 		// TODO - lage en mer effektiv kode
-		MengdeADT<T> begge = new KjedetMengde<T>();
+		MengdeADT<T> begge = new KjedetMengde<>();
 		LinearNode<T> aktuell = start;
-		T element = null;
+		T element;
 
 		while (aktuell != null) {// ubetinget innsetting
 			((KjedetMengde<T>) begge).settInn(aktuell.getElement());
@@ -232,7 +232,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	}
 
 	private void settInn(T element) {
-		LinearNode<T> nyNode = new LinearNode<T>(element);
+		LinearNode<T> nyNode = new LinearNode<>(element);
 		nyNode.setNeste(start);
 		start = nyNode;
 		antall++;

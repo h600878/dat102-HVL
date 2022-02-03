@@ -53,6 +53,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 
 	private void utvidKapasitet() {
+		@SuppressWarnings("unchecked")
 		T[] hjelpetabell = (T[]) (new Object[2 * tab.length]);
 		for (int i = 0; i < tab.length; i++) {
 			hjelpetabell[i] = tab[i];
@@ -78,7 +79,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 	public T fjern(T element) {
 	
-		// Søker etter og fjerner element. Returnerer null-ref ved ikke-funn
+		// SÃ¸ker etter og fjerner element. Returnerer null-ref ved ikke-funn
 
 		if (erTom())
 			throw new EmptyCollectionException("mengde");
@@ -110,8 +111,8 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 	
 	/*
-	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
-	 * overkjører hascode-metoden da en del biblioterker burker hascode sammen med
+	 * Nï¿½r vi overkjï¿½rer (override) equals- meteoden er det anbefalt at vi ogsÃ¥
+	 * overkjï¿½rer hascode-metoden da en del biblioterker burker hascode sammen med
 	 * equals. Vi kommer tilbake til forklaring og bruk av hascode senere i faget.
 	 */
 	@Override
@@ -151,7 +152,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	public MengdeADT<T> union(MengdeADT<T> m2) {
 		//TODO - Lage en mer effektiv kode
-		MengdeADT<T> begge = new TabellMengde<T>();
+		MengdeADT<T> begge = new TabellMengde<>();
 		T element = null;
 		/*
 		 * ...
@@ -162,7 +163,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
-		MengdeADT<T> snittM = new TabellMengde<T>();
+		MengdeADT<T> snittM = new TabellMengde<>();
 		T element = null;
 		/*
 		 * ...
@@ -173,7 +174,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
 		//TODO
-		MengdeADT<T> differensM = new TabellMengde<T>();
+		MengdeADT<T> differensM = new TabellMengde<>();
 		T element;
 		/*
 		 * Fyll ut
