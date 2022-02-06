@@ -1,5 +1,7 @@
 package no.hvl.dat102.adt;
 
+import no.hvl.dat102.exceptions.EmptyCollectionException;
+
 /**
  * Definerer interface til en generell liste. Spesielle typer av lister vil bli
  * avledet av dette grensesnittet.
@@ -25,7 +27,7 @@ public interface ListeADT<T> {
 	boolean inneholder(T element);
 
 	/**
-	 * Fjerner og returnerer referansen det første elmentet fra listen.
+	 * Fjerner og returnerer referansen det fÃ¸rste elmentet fra listen.
 	 *
 	 * @return elementet som er fjernet
 	 */
@@ -34,16 +36,16 @@ public interface ListeADT<T> {
 	/**
 	 * Fjerner og returnerer referansen til det siste elementet fra denne listen.
 	 * 
-	 * @exception EmpyCollectionException unntak kastes dersom listen allerede er tom
+	 * @exception EmptyCollectionException unntak kastes dersom listen allerede er tom
 	 * @return elementet som er fjernet
 	 */
 	T fjernSiste();
 
 	/**
-	 * Returnerer en referanse til det første elementet i denne listen.
+	 * Returnerer en referanse til det fÃ¸rste elementet i denne listen.
 	 * 
-	 * @exception EmpyCollectionException unntak kastes dersom listen allerede er tom
-	 * @return første element i listen
+	 * @exception EmptyCollectionException unntak kastes dersom listen allerede er tom
+	 * @return fÃ¸rste element i listen
 	 */
 	T foerste();
 

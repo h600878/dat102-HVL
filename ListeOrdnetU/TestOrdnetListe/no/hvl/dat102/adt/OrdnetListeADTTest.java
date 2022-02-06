@@ -74,7 +74,7 @@ public abstract class OrdnetListeADTTest {
 	@Test
 	public final void viseOrdnetIkkeAvtagende() {
 		// ... Fyll ut
-		// ... Legg til elementer og bruk fjernFoerste
+		// ... Legg til elementer og bruk fjernFÃ¸rste
 	}
 
 	@Test
@@ -98,7 +98,7 @@ public abstract class OrdnetListeADTTest {
 	 */
 	@Test
 	public final void leggTilOgfjernMedDuplikater() {
-		// ... Fyll ut med å legge til passende elementer
+		// ... Fyll ut med Ã¥ legge til passende elementer
 
 		assertEquals(e0, liste.fjern(e0));
 		assertEquals(e1, liste.fjern(e1));
@@ -143,7 +143,7 @@ public abstract class OrdnetListeADTTest {
 	}
 
 	/**
-	 * Tester om leggTil-fjern på en tom liste gir en tom liste.
+	 * Tester om leggTil-fjern pï¿½ en tom liste gir en tom liste.
 	 */
 	@Test
 	public final void leggTilFjernErTom() {
@@ -151,7 +151,7 @@ public abstract class OrdnetListeADTTest {
 	}
 
 	/**
-	 * Prøver å ta ut et element fra en tom liste.
+	 * Prï¿½ver ï¿½ ta ut et element fra en tom liste.
 	 * 
 	 */
 	@Test
