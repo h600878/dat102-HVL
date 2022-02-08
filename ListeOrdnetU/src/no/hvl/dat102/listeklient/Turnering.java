@@ -7,15 +7,15 @@ import no.hvl.dat102.kjedet.KjedetOrdnetListe;
 
 //Turnering.java
 //
-//Demonstrerer første runde av en turnering ved hjelp av ordnet liste.
+//Demonstrerer fÃ¸rste runde av en turnering ved hjelp av ordnet liste.
 
 public class Turnering {
 
 	public void settOpp() {
 
-		OrdnetListeADT<Lag> turnering = new KjedetOrdnetListe<Lag>();
+		OrdnetListeADT<Lag> turnering = new KjedetOrdnetListe<>();
 		String lag1, lag2, navn;
-		int antallSeire = 0;
+		int antallSeire;
 		Scanner in = new Scanner(System.in);
 		System.out.println("Turnering\n");
 		System.out.println("Oppgi et partall lik antall lag:");
@@ -31,7 +31,7 @@ public class Turnering {
 			turnering.leggTil(new Lag(navn, antallSeire));
 		}
 
-		System.out.println("\n Første turneringsrunde:");
+		System.out.println("\n FÃ¸rste turneringsrunde:");
 		int n = antallLag/2;
 		for (int antall = 1; antall <= n; antall++) {
 			lag1 = (turnering.fjernFoerste()).getNavn();
